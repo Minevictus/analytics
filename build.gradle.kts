@@ -19,3 +19,5 @@ bungee {
     author = "NahuLD"
     depends = setOf("MV-Util")
 }
+
+relocateBungee()
