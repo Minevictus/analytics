@@ -1,0 +1,18 @@
+= analytics
+
+Bungee side plugin for unique joins per domain.
+
+== Build
+
+Requirements:
+
+. Java 11-14 JDK
+
+Method:
+
+. `./gradlew jar`
+. Find the jars in `./build/libs`.
+
+== Usage
+
+Put the jar in the Spigot server's `plugins` directory.
