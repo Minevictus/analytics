@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "us.minevict"
-version = "0.1.0"
+version = "0.1.1"
 
 mvUtilVersion = "5.2.0"
 

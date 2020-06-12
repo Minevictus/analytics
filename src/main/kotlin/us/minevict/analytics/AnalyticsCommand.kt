@@ -8,12 +8,11 @@ import co.aikar.idb.Database
 import net.md_5.bungee.api.CommandSender
 import net.md_5.bungee.api.chat.ComponentBuilder
 import us.minevict.mvutil.common.ext.*
-import java.io.File
-import java.text.DateFormat
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.TimeUnit
 
 @CommandAlias("analytics")
+@CommandPermission(Permissions.ANALYTICS_COMMAND)
 class AnalyticsCommand(
     private val executor: ExecutorService,
     private val database: Database
@@ -28,6 +27,7 @@ class AnalyticsCommand(
     @Subcommand("lookup")
     @Description("Look which domain a player joined from")
     @CommandCompletion("@players")
+    @CommandPermission(Permissions.ANALYTICS_COMMAND_LOOKUP_PLAYER)
     fun lookup(
         sender: CommandSender,
         playerName: String
@@ -52,6 +52,7 @@ class AnalyticsCommand(
 
     @Subcommand("report")
     @Description("Get a report of the unique joins within a timeframe")
+    @CommandPermission(Permissions.ANALYTICS_COMMAND_REPORT)
     fun report(
         sender: CommandSender,
 
