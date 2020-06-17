@@ -1,13 +1,12 @@
 import us.minevict.mvutilgradleplugin.*
 
 plugins {
-    id("us.minevict.mvutil") version "0.2.0"
+    id("us.minevict.mvutil") version "0.2.5"
 }
 
 group = "us.minevict"
-version = "0.1.1"
-
-mvUtilVersion = "5.2.0"
+version = "0.1.2"
+mvUtilVersion = "6.0.1"
 
 dependencies {
     compileOnly(waterfallApi("1.15"))
@@ -17,7 +16,5 @@ dependencies {
 bungee {
     main = "us.minevict.analytics.Analytics"
     author = "NahuLD"
-    depends = setOf("MV-Util")
+    depend()
 }
-
-relocateBungee()
